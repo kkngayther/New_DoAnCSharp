@@ -227,13 +227,13 @@ namespace IronOCR
 
         private void dữLiệuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 Du_Lieu_Form = new Form2();
+            DataManagement Du_Lieu_Form = new DataManagement();
             Du_Lieu_Form.ShowDialog();
         }
 
         private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 Tim_Kiem_Form = new Form3();
+            DataSearch Tim_Kiem_Form = new DataSearch();
             Tim_Kiem_Form.ShowDialog();
         }
     }
