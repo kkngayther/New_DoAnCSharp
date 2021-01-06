@@ -43,12 +43,12 @@ namespace IronOCR
                 (dgv2.DataSource as DataTable).DefaultView.RowFilter = "id = '" + txtNhapTimKiem.Text + "'";
                 dgv2.Refresh();
             }    
-            else if (cbbLoaiDuLieu.Text == "Họ và Tên")
+            else if (cbbLoaiDuLieu.Text == "Full Name")
             {
                 (dgv2.DataSource as DataTable).DefaultView.RowFilter = "name = '" + txtNhapTimKiem.Text + "'";
                 dgv2.Refresh();
             }
-            else if (cbbLoaiDuLieu.Text == "Khóa")
+            else if (cbbLoaiDuLieu.Text == "Session")
             {
                 (dgv2.DataSource as DataTable).DefaultView.RowFilter = "session = '" + txtNhapTimKiem.Text + "'";
                 dgv2.Refresh();

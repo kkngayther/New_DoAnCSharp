@@ -55,18 +55,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(165, 29);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(221, 36);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.Size = new System.Drawing.Size(71, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Typing";
             // 
             // txtNhapTimKiem
             // 
-            this.txtNhapTimKiem.Location = new System.Drawing.Point(217, 28);
+            this.txtNhapTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhapTimKiem.Location = new System.Drawing.Point(289, 34);
+            this.txtNhapTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNhapTimKiem.Name = "txtNhapTimKiem";
-            this.txtNhapTimKiem.Size = new System.Drawing.Size(227, 20);
+            this.txtNhapTimKiem.Size = new System.Drawing.Size(486, 34);
             this.txtNhapTimKiem.TabIndex = 2;
             // 
             // dgv2
@@ -82,9 +85,11 @@
             this.department});
             this.dgv2.DataSource = this.studentBindingSource;
             this.dgv2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv2.Location = new System.Drawing.Point(0, 72);
+            this.dgv2.Location = new System.Drawing.Point(0, 94);
+            this.dgv2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv2.Name = "dgv2";
-            this.dgv2.Size = new System.Drawing.Size(609, 378);
+            this.dgv2.RowHeadersWidth = 51;
+            this.dgv2.Size = new System.Drawing.Size(1022, 538);
             this.dgv2.TabIndex = 0;
             this.dgv2.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView2_CellFormatting);
             // 
@@ -92,24 +97,28 @@
             // 
             this.id.DataPropertyName = "id";
             this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
             this.id.Name = "id";
             // 
             // name
             // 
             this.name.DataPropertyName = "name";
             this.name.HeaderText = "Họ và Tên";
+            this.name.MinimumWidth = 6;
             this.name.Name = "name";
             // 
             // session
             // 
             this.session.DataPropertyName = "session";
             this.session.HeaderText = "Khóa";
+            this.session.MinimumWidth = 6;
             this.session.Name = "session";
             // 
             // department
             // 
             this.department.DataPropertyName = "department";
             this.department.HeaderText = "Khoa";
+            this.department.MinimumWidth = 6;
             this.department.Name = "department";
             // 
             // studentBindingSource
@@ -129,9 +138,10 @@
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(491, 18);
+            this.btnTimKiem.Location = new System.Drawing.Point(849, 28);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(106, 36);
+            this.btnTimKiem.Size = new System.Drawing.Size(141, 44);
             this.btnTimKiem.TabIndex = 4;
             this.btnTimKiem.Text = "Search";
             this.btnTimKiem.UseVisualStyleBackColor = false;
@@ -139,24 +149,27 @@
             // 
             // cbbLoaiDuLieu
             // 
+            this.cbbLoaiDuLieu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLoaiDuLieu.FormattingEnabled = true;
             this.cbbLoaiDuLieu.Items.AddRange(new object[] {
             "ID",
-            "Họ và Tên",
-            "Khóa",
-            "Khoa"});
-            this.cbbLoaiDuLieu.Location = new System.Drawing.Point(12, 27);
+            "Full Name",
+            "Session",
+            "Department"});
+            this.cbbLoaiDuLieu.Location = new System.Drawing.Point(35, 32);
+            this.cbbLoaiDuLieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbLoaiDuLieu.Name = "cbbLoaiDuLieu";
-            this.cbbLoaiDuLieu.Size = new System.Drawing.Size(116, 21);
+            this.cbbLoaiDuLieu.Size = new System.Drawing.Size(153, 36);
             this.cbbLoaiDuLieu.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 7);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(30, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 17);
+            this.label3.Size = new System.Drawing.Size(82, 28);
             this.label3.TabIndex = 6;
             this.label3.Text = "Options";
             // 
@@ -176,9 +189,9 @@
             // 
             // DataSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 450);
+            this.ClientSize = new System.Drawing.Size(1022, 632);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbbLoaiDuLieu);
             this.Controls.Add(this.btnTimKiem);
@@ -186,6 +199,7 @@
             this.Controls.Add(this.txtNhapTimKiem);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DataSearch";
             this.Text = "DataSearch";
             this.Load += new System.EventHandler(this.Form3_Load);

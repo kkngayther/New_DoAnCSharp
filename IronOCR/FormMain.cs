@@ -22,10 +22,10 @@ using System.Collections;
 
 namespace IronOCR
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
         DataTable dt = new DataTable();
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
             dgvAppearances.Columns.Clear();
@@ -164,6 +164,12 @@ namespace IronOCR
             lbKhoa.Text = listDetail[3].ToString();
             ptbAnhSinhVien.Image = new Bitmap(Application.StartupPath + "\\Image\\" + lbMSSV.Text + ".png");
             isExist(lbMSSV.Text);
+
+            using (var bmp = new Bitmap(pnlTheSinhVien.Width, pnlTheSinhVien.Height))
+            {
+                pnlTheSinhVien.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                bmp.Save(@"Card/" + lbMSSV.Text + ".bmp");
+            }
         }
 
         private void isExist(string id)
@@ -224,17 +230,35 @@ namespace IronOCR
                 captureDevice.Stop();
             }
         }
-
-        private void dữLiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        string imageURL = null;
+        private void btnPrint_Click(object sender, EventArgs e)
         {
-            DataManagement Du_Lieu_Form = new DataManagement();
-            Du_Lieu_Form.ShowDialog();
+            imageURL = "C:\\Users\\PC\\OneDrive\\Desktop\\New DoAn\\IronOCR\\bin\\Debug\\Card\\" + lbMSSV.Text + ".bmp";
+            if (!string.IsNullOrEmpty(imageURL))
+            {
+                using (FormPrint frm = new FormPrint(imageURL))
+                {
+                    frm.ShowDialog();
+                }
+            }
         }
 
-        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnStats_Click(object sender, EventArgs e)
         {
-            DataSearch Tim_Kiem_Form = new DataSearch();
-            Tim_Kiem_Form.ShowDialog();
+            FormStats frm = new FormStats();
+            frm.ShowDialog();
+        }
+
+        private void btnDataManagement_Click(object sender, EventArgs e)
+        {
+            DataManagement frm = new DataManagement();
+            frm.ShowDialog();
+        }
+
+        private void btnDataSearch_Click(object sender, EventArgs e)
+        {
+            DataSearch frm = new DataSearch();
+            frm.ShowDialog();
         }
     }
 }

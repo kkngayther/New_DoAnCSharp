@@ -121,11 +121,11 @@
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="DataManagement.cs">
       <SubType>Form</SubType>
@@ -161,8 +161,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <EmbeddedResource Include="CardPreview.rdlc" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataManagement.resx">
       <DependentUpon>DataManagement.cs</DependentUpon>
@@ -172,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrint.resx">
       <DependentUpon>FormPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStats.resx">
+      <DependentUpon>FormStats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
